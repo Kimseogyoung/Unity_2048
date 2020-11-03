@@ -16,8 +16,12 @@ public class GameManager : MonoBehaviour
     public GameObject stopPopup;
     public GameObject endingPopUp;
     public GameObject resetButton;
-    
 
+
+    private void Awake()
+    {
+        Screen.SetResolution(1080, 1920,true);
+    }
     void Start()
     {
         level = SetGameLevel.instance.getLevel();
